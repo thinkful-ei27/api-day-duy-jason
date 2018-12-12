@@ -1,3 +1,4 @@
+/* eslint-disable strict */
 /* global shoppingList, store */
 
 $(document).ready(function() {
@@ -8,5 +9,5 @@ $(document).ready(function() {
 api.getItems((items) => {
   items.forEach((item) => store.addItem(item));
   shoppingList.render();
+  const item = store.items[0];
 });
-
